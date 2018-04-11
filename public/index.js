@@ -25,16 +25,30 @@ const populateList = function(beers) {
 
   beers.forEach(beer => {
     const beerName = document.createElement("li");
-    beerName.innerText = beer.name;
+    beerName.innerText = `Name: ${beer.name}`
     const beerPhoto = document.createElement("img");
     beerPhoto.src = beer.image_url;
+
+    const yeast = document.createElement("li")
+    yeast.innerText = `Yeast: ${beer.ingredients.yeast}`;
     ul.appendChild(beerName);
+
+    const hopHeader = document.createElement("li");
+    hopHeader.innerText = 'Hops:';
+    ul.appendChild(hopHeader);
+
+    beer.ingredients.hops.forEach(function(hopType, index){
+      // debugger;
+      let hop = document.createElement('li')
+      hop.innerText = `-   ${hopType.name}`;
+      ul.appendChild(hop)
+    })
+
+    ul.appendChild(yeast);
     ul.appendChild(beerPhoto);
-    // debugger;
   });
 
 };
-
 
 
 
