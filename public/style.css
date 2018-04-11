@@ -1,0 +1,24 @@
+body {
+  background-color: hotpink;
+  color: rgb(230, 230, 250);
+  font-family: cursive;
+}
+
+img {
+  width: 50px;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li{
+  margin-bottom: 10px;
+}
+img{
+  margin-bottom: 40px;
+}
